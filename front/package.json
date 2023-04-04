@@ -9,9 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
     "@chakra-ui/react": "^2.5.4",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -29,7 +26,11 @@
     "framer-motion": "^10.9.1",
     "hardhat-gas-reporter": "^1.0.9",
     "keccak256": "^1.0.6",
-    "merkletreejs": "^0.3.9"
+    "merkletreejs": "^0.3.9",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "yarn": "^1.22.19"
   },
   "devdependencies": {
     "@nomiclabs/hardhat-etherscan": "^3.1.7"
