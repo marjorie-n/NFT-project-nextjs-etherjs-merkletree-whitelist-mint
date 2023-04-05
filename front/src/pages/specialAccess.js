@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useEthersProvider from "../../hook/useEthersProvider";
-import Contract from "../../../back/artifacts/contracts/NFTCryptoAstro.sol/NFTCryptoAstro.json";
+import Contract from "../../public/NFTCryptoAstro.json";
 import { ethers } from "ethers";
 import Layout from "../../components/Layout/Layout";
 import { Flex, Spinner, Text } from "@chakra-ui/react";
