@@ -1,11 +1,20 @@
 import { useState } from "react";
 import React from "react";
-import { Flex, Text, Button, useToast, Spinner, Image } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Button,
+  useToast,
+  Spinner,
+  Image,
+  Icon,
+} from "@chakra-ui/react";
 import { hasMetamask } from "../../utils/hasMetamask";
 import useEthersProvider from "../../hook/useEthersProvider";
 import specialAccess from "../../src/pages/specialAccess";
 import { ethers } from "ethers";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
 
 const Header = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -64,20 +73,38 @@ const Header = () => {
       </Flex>
 
       <Flex>
-        <Link href="/specialAccess">Special</Link>
+        <Link href="/specialAccess">special</Link>
       </Flex>
 
       {isLoading ? (
         <Spinner />
       ) : account ? (
-        <Text as="span" color="white" fontWeight="bold">
-          Wallet:
-          {account && account.slice(0, 5) + "..." + account.slice(-4)}
-        </Text>
+        <Flex alignItems="center">
+          <Link
+            href="https://github.com/Margotte83"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon as={FaGithub} color="white" boxSize={6} mr={3} />
+          </Link>
+          <Text as="span" color="white" fontWeight="bold">
+            Wallet:
+            {account && account.slice(0, 5) + "..." + account.slice(-4)}
+          </Text>
+        </Flex>
       ) : (
-        <Button onClick={connectWallet} colorScheme="blue">
-          Connect Wallet
-        </Button>
+        <Flex alignItems="center">
+          <Link
+            href="https://github.com/Margotte83"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon as={FaGithub} color="white" boxSize={6} mr={3} />
+          </Link>
+          <Button onClick={connectWallet} colorScheme="blue">
+            Connect wallet
+          </Button>
+        </Flex>
       )}
     </Flex>
   );
