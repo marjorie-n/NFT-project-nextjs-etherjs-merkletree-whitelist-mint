@@ -17,17 +17,20 @@ export default function Home() {
         rel="stylesheet"
       ></link>
       <Layout>
-        <Flex direction={["column", "column", "row", "row"]} w="100%" h="85vh">
+        
+           
+        <Flex direction={["column", "column", "row", "row"]} w="100%" h="85vh"   >
           <Flex
             width={["100%", "100%", "50%", "50%"]}
             direction="column"
             align="center"
             justify={"center"}
             fontFamily={"Roboto Mono"}
+            
           >
             <Heading
               as="h1"
-              fontSize={["2rem", "2rem", "3rem", "4rem"]}
+              fontSize={["2rem", "3rem", "3rem", "4rem"]}
               fontFamily={"Francois One"}
             >
               Crypto Astro
@@ -38,7 +41,7 @@ export default function Home() {
               </chakra.span>
             </Text>
             <Text mt="1rem" fontSize="2rem">
-              <chakra.span fontWeight="bold">Explore the galaxy🪐</chakra.span>
+              <chakra.span fontWeight="bold">Explore the Galaxy🪐</chakra.span>
             </Text>
             <Text mt="1rem" fontSize="2rem">
               <chakra.span fontWeight="bold">
@@ -55,10 +58,11 @@ export default function Home() {
             <Image
               src="https://res.cloudinary.com/defpadn0s/image/upload/v1680449623/cryto_astro-home_mtls9f.png"
               alt="astronauts"
-              width="50%"
-            ></Image>
+              width={["100%", "60%", "80%", "80%"]}
+            />
           </Flex>
         </Flex>
+        
       </Layout>
     </>
   );
