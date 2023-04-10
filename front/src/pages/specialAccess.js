@@ -15,8 +15,9 @@ const SpecialAccess = () => {
   const toast = useToast();
 
   const contractAddress = "0x72a6AfA989F4906fb3ecbBB534321FB8Cf4cC063";
-  const teamAddress = process.env.NEXT_PUBLIC_TEAM_ADDRESS;
-  const ownerAddress = process.env.NEXT_PUBLIC_OWNER_ADDRESS;
+  //Testnet addresses
+  const teamAddress = "0xEcb86fEf51e5c603d0514d904b79AB40158BA67A";
+  const ownerAddress = "0x957E3B7c98cA23dBc89B7358f90aC1A8d5b2655E";
   const maxGift = 5;
 
   useEffect(() => {
