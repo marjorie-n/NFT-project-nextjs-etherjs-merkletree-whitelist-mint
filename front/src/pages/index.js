@@ -7,6 +7,11 @@ export default function Home() {
       <title>Crypto Astro</title>
       <meta name="description" content="crypto astro nft dapp" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta
+        name="keywords"
+        content="Crypto astro, NFT, Polygon/Matic, Blockchain, Cryptocurrency, Mint, Smart contract, Marketplace, Collectibles, Token, Exchange, Wallet, Crypto art, Digital art gallery, Investment, Blockchain technology, Digital art, Crypto-economy, Blockchain ecosystem, Non-fungible tokens, Digital artworks, NFT events, User experience (UX), Metaverse, Digital identity"
+      />
+
       <link rel="icon" href="/favicon.ico" />
       <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
@@ -17,16 +22,13 @@ export default function Home() {
         rel="stylesheet"
       ></link>
       <Layout>
-        
-           
-        <Flex direction={["column", "column", "row", "row"]} w="100%" h="85vh"   >
+        <Flex direction={["column", "column", "row", "row"]} w="100%" h="85vh">
           <Flex
             width={["100%", "100%", "50%", "50%"]}
             direction="column"
             align="center"
             justify={"center"}
             fontFamily={"Roboto Mono"}
-            
           >
             <Heading
               as="h1"
@@ -62,7 +64,6 @@ export default function Home() {
             />
           </Flex>
         </Flex>
-        
       </Layout>
     </>
   );
