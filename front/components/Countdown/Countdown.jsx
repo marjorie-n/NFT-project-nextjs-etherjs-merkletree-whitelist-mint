@@ -23,18 +23,21 @@ const Countdown = (props) => {
       minutes = minutes - days * 24 * 60 - hours * 60;
       seconds = seconds - days * 24 * 60 * 60 - hours * 60 * 60 - minutes * 60;
 
-      if (days == 0 && hours == 0 && minutes == 0 && seconds == 0) {
-        props.getDatas();
+      let countdownInfos = {
+        days: days,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds,
+      };
+      setCountdownInfos(countdownInfos);
 
-        let countdownInfos = {
-          days: days,
-          hours: hours,
-          minutes: minutes,
-          seconds: seconds,
-        };
-        setCountdownInfos(countdownInfos);
+      if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
+        clearInterval(intervalID);
+        props.getDatas();
       }
     }, 1000);
+
+    let intervalID = null;
   };
 
   return (
