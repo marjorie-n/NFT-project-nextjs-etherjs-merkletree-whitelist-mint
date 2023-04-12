@@ -32,7 +32,7 @@ const Countdown = (props) => {
       setCountdownInfos(countdownInfos);
 
       if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
-        clearInterval(intervalID);
+        
         props.getDatas();
       }
     }, 1000);
