@@ -37,7 +37,6 @@ const Countdown = (props) => {
       }
     }, 1000);
 
-    let intervalID = null;
   };
 
   return (
