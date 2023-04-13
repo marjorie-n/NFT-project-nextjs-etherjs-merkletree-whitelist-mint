@@ -25,7 +25,7 @@ const PublicMint = (props) => {
     const contract = new ethers.Contract(contractAddress, Contract.abi, signer);
 
     let overrides = {
-      value: ethers.utils.parseEther("0.003").mul(quantity),
+      value: ethers.utils.parseEther("5").mul(quantity),
     };
     try {
       setIsMinting(true);
@@ -87,7 +87,12 @@ const PublicMint = (props) => {
             </Text>
             <Text mt="1rem" fontSize="2rem">
               <chakra.span fontWeight="bold">Price: </chakra.span>
-              <chakra.span color="blue.400">0.003 ETH</chakra.span> / NFT
+              <chakra.span color="blue.400">5 MATIC*</chakra.span> / NFT
+            </Text>
+            <Text mt="1rem" fontSize="2rem">
+              <chakra.span color="gray.300" fontSize={"1rem"}>
+                *Mumbai testnet MATIC
+              </chakra.span>
             </Text>
             <Flex
               pl="2rem"
@@ -128,7 +133,11 @@ const PublicMint = (props) => {
             justify="center"
             mt={["2rem", "2rem", "0", "0"]}
           >
-            <Image src="/astronauts.png" alt="astronauts NFTs" width="60%"></Image>
+            <Image
+              src="/astronauts.png"
+              alt="astronauts NFTs"
+              width="60%"
+            ></Image>
           </Flex>
         </Flex>
       )}
