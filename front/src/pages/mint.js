@@ -106,9 +106,9 @@ export default function Home() {
                   case 3:
                     return (
                       <PublicMint
-                        getDatas={getDatas} // récupérer les données de la blockchain
-                        totalSupply={totalSupply} // récupérer le nombre de token mint
-                        maxPublic={maxWhitelist + maxPublic} // récupérer le nombre max de token public
+                        getDatas={getDatas} 
+                        totalSupply={totalSupply} 
+                        maxPublic={maxWhitelist + maxPublic} 
                       />
                     );
                   case 4:
