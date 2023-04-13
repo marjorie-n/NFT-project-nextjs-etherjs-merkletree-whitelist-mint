@@ -40,7 +40,7 @@ const WhitelistMint = (props) => {
     let proof = tree.getHexProof(leaf);
 
     let overrides = {
-      value: ethers.utils.parseEther("0.002"),
+      value: ethers.utils.parseEther("3"),
     };
     try {
       setIsMinting(true);
@@ -101,7 +101,12 @@ const WhitelistMint = (props) => {
             </Text>
             <Text mt="1rem" fontSize="2rem">
               <chakra.span fontWeight="bold">Price: </chakra.span>
-              <chakra.span color="blue.400">0.002 ETH</chakra.span> / NFT
+              <chakra.span color="blue.400">3 MATIC*</chakra.span> / NFT
+            </Text>
+            <Text mt="1rem" fontSize="2rem">
+              <chakra.span color="gray.300" fontSize={"1rem"}>
+                *Mumbai testnet MATIC
+              </chakra.span>
             </Text>
             <Button mt="2rem" onClick={mint} colorScheme="blue" width="200px">
               Mint
