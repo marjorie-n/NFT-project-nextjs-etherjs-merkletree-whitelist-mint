@@ -34,14 +34,15 @@ const SpecialAccess = () => {
       provider
     );
 
-    let hasNFTs = await contract.tokensOfOwner(account);
+    let hasNFTs = await contract.tokensOfOwner(account);// 
     setHasNFTs(hasNFTs);
     setIsLoading(false);
   };
 
-  const handleGift = async () => {
+  const handleGift = async (e) => {
     e.preventDefault();
 
+  
     if (account !== ownerAddress) {
       toast({
         title: "Error",
@@ -115,6 +116,7 @@ const SpecialAccess = () => {
               Please connect your wallet to see your NFTs.
             </Text>
           )}
+      
           {account && account === ownerAddress && (
             <Box align="center" justify="center">
               <Text fontSize="2rem" mb="2rem" align="center">
