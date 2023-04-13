@@ -47,7 +47,7 @@ export default function Home() {
 
     //sale start time
     const saleStartTime = await contract.saleStartTime();
-    setSaleStartTime(saleStartTime.toNumber()); //convertir bignumber en number pour afficher la date en timestamp
+    setSaleStartTime(saleStartTime.toNumber()); 
 
     //total supply
     const totalSupply = await contract.totalSupply();
