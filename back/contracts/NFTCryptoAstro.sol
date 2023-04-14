@@ -33,9 +33,9 @@ contract NFTCryptoAstro is ERC721A, ERC721AQueryable, Ownable, PaymentSplitter {
     uint private constant MAX_PUBLIC = 370;
     uint private constant MAX_SUPPLY_MINUS_GIFT = MAX_SUPPLY - MAX_GIFT;
 
-    uint private constant PRICE_WHITELIST_MINT = 0.002 ether;
-    uint private constant PRICE_PUBLIC_MINT = 0.003 ether;
-    uint public saleStartTime = 1681311600;
+    uint private constant PRICE_WHITELIST_MINT = 3 ether;
+    uint private constant PRICE_PUBLIC_MINT = 5 ether;
+    uint public saleStartTime = 1682953200;
     bytes32 public merkleRoot;
     string public baseURI;
 
@@ -48,14 +48,12 @@ contract NFTCryptoAstro is ERC721A, ERC721AQueryable, Ownable, PaymentSplitter {
     bool public isPaused = false;
 
     address[] private _team = [0xEcb86fEf51e5c603d0514d904b79AB40158BA67A];
-
     uint[] private _teamShares = [100];
 
     constructor(
         bytes32 _merkleRoot,
         string memory _baseURI
     ) ERC721A("Crypto Astro", "CA") PaymentSplitter(_team, _teamShares) {
-       
         merkleRoot = _merkleRoot;
         baseURI = _baseURI;
         teamlength = _team.length;
@@ -172,9 +170,7 @@ contract NFTCryptoAstro is ERC721A, ERC721AQueryable, Ownable, PaymentSplitter {
     function tokenURI(
         uint256 _tokenId
     ) public view override(ERC721A, IERC721A) returns (string memory) {
-        //override permet de modifier la fonction tokenURI de la librairie ERC721A
         require(_exists(_tokenId), "ERC721A: URI query for nonexistent token");
-        // ipfs:// CID// token id // .json
         return string(abi.encodePacked(baseURI, _tokenId.toString(), ".json"));
     }
 
@@ -228,7 +224,7 @@ contract NFTCryptoAstro is ERC721A, ERC721AQueryable, Ownable, PaymentSplitter {
         );
         amountNFTperWalletWhitelistSale[msg.sender] += _quantity;
 
-        _safeMint(_account, _quantity); // mint les NFTs  à l'adresse de la personne
+        _safeMint(_account, _quantity);
     }
 
     /**
@@ -269,8 +265,8 @@ contract NFTCryptoAstro is ERC721A, ERC721AQueryable, Ownable, PaymentSplitter {
         address _to,
         uint _quantity
     ) external onlyOwner whenNotPaused {
-        require(getStep() > Step.PublicSale, "Gift is after public sale"); 
-        require(totalSupply() + _quantity <= MAX_SUPPLY, "MAX supply exceeded"); 
-        _safeMint(_to, _quantity); 
+        require(getStep() > Step.PublicSale, "Gift is after public sale");
+        require(totalSupply() + _quantity <= MAX_SUPPLY, "MAX supply exceeded");
+        _safeMint(_to, _quantity);
     }
 }
