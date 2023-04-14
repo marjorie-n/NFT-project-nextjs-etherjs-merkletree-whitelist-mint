@@ -20,7 +20,7 @@ export default function Home() {
   const [totalSupply, setTotalSupply] = useState(null);
 
   const toast = useToast();
-  const contractAddress = "0x72a6AfA989F4906fb3ecbBB534321FB8Cf4cC063";
+  const contractAddress = "0xD8e69f674a04dB289ef49A27f7145FBd2d19a3aF";
 
   const maxSupply = 500;
   const maxGift = 5;
@@ -33,7 +33,7 @@ export default function Home() {
     }
   }, [account]);
 
-  const getDatas = async () => {
+  const getDatas = async () => { 
     setIsLoading(true);
     const contract = new ethers.Contract(
       contractAddress,
