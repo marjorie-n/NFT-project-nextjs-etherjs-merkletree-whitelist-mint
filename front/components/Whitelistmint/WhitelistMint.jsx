@@ -21,7 +21,7 @@ const WhitelistMint = (props) => {
   const [isMinting, setIsMinting] = useState(false);
 
   const toast = useToast();
-  const contractAddress = "0x72a6AfA989F4906fb3ecbBB534321FB8Cf4cC063";
+  const contractAddress = "0xD8e69f674a04dB289ef49A27f7145FBd2d19a3aF";
 
   const mint = async () => {
     const signer = provider.getSigner();
