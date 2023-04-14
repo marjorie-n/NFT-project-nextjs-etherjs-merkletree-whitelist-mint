@@ -14,8 +14,8 @@ const SpecialAccess = () => {
 
   const toast = useToast();
 
-  const contractAddress = "0x72a6AfA989F4906fb3ecbBB534321FB8Cf4cC063";
-  //Testnet addresses
+  const contractAddress = "0xD8e69f674a04dB289ef49A27f7145FBd2d19a3aF";
+  //Testnet address
   const teamAddress = "0xEcb86fEf51e5c603d0514d904b79AB40158BA67A";
   const ownerAddress = "0x957E3B7c98cA23dBc89B7358f90aC1A8d5b2655E";
   const maxGift = 5;
