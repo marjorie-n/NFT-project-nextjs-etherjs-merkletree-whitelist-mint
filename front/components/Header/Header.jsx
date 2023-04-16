@@ -102,12 +102,12 @@ const Header = () => {
       ) : (
         <Flex alignItems="center">
           <Link
-          className={styles.github}
+            className={styles.github}
             href="https://github.com/Margotte83"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon  as={FaGithub} color="white" boxSize={6} mr={3} />
+            <Icon className={styles.github} as={FaGithub} color="white" boxSize={6} mr={3} />
           </Link>
 
           <Button
