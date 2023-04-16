@@ -1,6 +1,7 @@
 import { Text, Flex, Heading, Image, chakra } from "@chakra-ui/react";
 import Layout from "../../components/Layout/Layout";
 
+
 export default function Home() {
   return (
     <>
@@ -22,30 +23,41 @@ export default function Home() {
         rel="stylesheet"
       ></link>
       <Layout>
-        <Flex direction={["column", "column", "row", "row"]} w="100%" h="85vh">
+        <Flex
+          direction={["column", "column", "row", "row"]}
+          w="100%"
+          h="85vh"
+          justify="center"
+          alignItems="center"
+          textAlign="center"
+          p="1rem"
+          maxW="1200px"
+          mx="auto"
+        >
           <Flex
             width={["100%", "100%", "50%", "50%"]}
             direction="column"
             align="center"
-            justify={"center"}
-            fontFamily={"Roboto Mono"}
+            justify="center"
+            fontFamily="Roboto Mono"
           >
             <Heading
               as="h1"
               fontSize={["2rem", "3rem", "3rem", "4rem"]}
-              fontFamily={"Francois One"}
+              fontFamily="Francois One"
+              mb="1rem"
             >
               Crypto Astro
             </Heading>
-            <Text mt="2rem" fontSize="2rem">
+            <Text fontSize={["1.5rem", "2rem", "2rem", "2.5rem"]}>
               <chakra.span fontWeight="bold">
                 Collect Crypto Astro NFTs:
               </chakra.span>
             </Text>
-            <Text mt="1rem" fontSize="2rem">
+            <Text fontSize={["1.5rem", "2rem", "2rem", "2.5rem"]} mt="0.5rem">
               <chakra.span fontWeight="bold">Explore the Galaxy🪐</chakra.span>
             </Text>
-            <Text mt="1rem" fontSize="2rem">
+            <Text fontSize={["1.5rem", "2rem", "2rem", "2.5rem"]} mt="0.5rem">
               <chakra.span fontWeight="bold">
                 On the Polygon blockchain✨
               </chakra.span>
