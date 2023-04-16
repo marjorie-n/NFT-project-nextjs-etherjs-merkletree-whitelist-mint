@@ -18,23 +18,24 @@ const Footer = () => {
       </chakra.span>
       <Flex align="center">
         <Link
-          href="https://www.alyra.fr/"
-          color="purple.400"
-          target="_blank"
-          rel="noopener noreferrer"
-          mr={2}
-        >
-          Alyra
-        </Link>
-        <chakra.span>|</chakra.span>
-        <Link
           href="https://www.linkedin.com/in/marjorie-ngoupende-dev/"
           color="purple.400"
           target="_blank"
           rel="noopener noreferrer"
           ml={2}
+          _hover={{ textDecoration: "none", color: "pink.500" }}
         >
           @Marjorie
+        </Link>
+        <Link
+          href="https://www.alyra.fr/"
+          color="purple.400"
+          target="_blank"
+          rel="noopener noreferrer"
+          mx={2}
+          _hover={{ textDecoration: "none", color: "pink.500" }}
+        >
+          <chakra.span color="white">|</chakra.span>Alyra
         </Link>
       </Flex>
     </Flex>
