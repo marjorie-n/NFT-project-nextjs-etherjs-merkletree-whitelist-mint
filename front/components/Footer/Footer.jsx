@@ -14,7 +14,6 @@ const Footer = () => {
       py={[2, 3]}
       flexWrap="wrap"
       textAlign="center"
-      maxW="1200px"
       margin="0 auto"
     >
       <chakra.span mr={2} mb={[2, 0]}>
