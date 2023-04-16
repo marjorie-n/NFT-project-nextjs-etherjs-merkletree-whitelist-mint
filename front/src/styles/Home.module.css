@@ -1,0 +1,10 @@
+@media (max-width: 600px) {
+  .logo,
+  .github {
+    display: none;
+  }
+  .button {
+    width: 150px;
+    margin-left: 5px;
+  }
+}
