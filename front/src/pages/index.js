@@ -1,7 +1,6 @@
 import { Text, Flex, Heading, Image, chakra } from "@chakra-ui/react";
 import Layout from "../../components/Layout/Layout";
 
-
 export default function Home() {
   return (
     <>
@@ -22,6 +21,7 @@ export default function Home() {
         href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap"
         rel="stylesheet"
       ></link>
+
       <Layout>
         <Flex
           direction={["column", "column", "row", "row"]}
@@ -43,21 +43,27 @@ export default function Home() {
           >
             <Heading
               as="h1"
-              fontSize={["2rem", "3rem", "3rem", "4rem"]}
+              fontSize={["3rem", "3rem", "3rem", "4rem"]}
               fontFamily="Francois One"
               mb="1rem"
             >
               Crypto Astro
             </Heading>
-            <Text fontSize={["1.5rem", "2rem", "2rem", "2.5rem"]}>
+            <Text fontSize={["1.5rem", "1.75rem", "1.75rem", "2rem"]}>
               <chakra.span fontWeight="bold">
                 Collect Crypto Astro NFTs:
               </chakra.span>
             </Text>
-            <Text fontSize={["1.5rem", "2rem", "2rem", "2.5rem"]} mt="0.5rem">
+            <Text
+              fontSize={["1.5rem", "1.75rem", "1.75rem", "2rem"]}
+              mt="0.5rem"
+            >
               <chakra.span fontWeight="bold">Explore the Galaxy🪐</chakra.span>
             </Text>
-            <Text fontSize={["1.5rem", "2rem", "2rem", "2.5rem"]} mt="0.5rem">
+            <Text
+              fontSize={["1.5rem", "1.75rem", "1.75rem", "2rem"]}
+              mt="0.5rem"
+            >
               <chakra.span fontWeight="bold">
                 On the Polygon blockchain✨
               </chakra.span>
@@ -67,12 +73,12 @@ export default function Home() {
             width={["100%", "100%", "50%", "50%"]}
             align="center"
             justify="center"
-            mt={["2rem", "2rem", "0", "0"]}
+            mt={["1.5rem", "1.5rem", "0", "0"]}
           >
             <Image
               src="https://res.cloudinary.com/defpadn0s/image/upload/v1680449623/cryto_astro-home_mtls9f.png"
               alt="astronauts"
-              width={["100%", "60%", "80%", "80%"]}
+              width={["100%", "60%", "80%", "90%"]}
             />
           </Flex>
         </Flex>

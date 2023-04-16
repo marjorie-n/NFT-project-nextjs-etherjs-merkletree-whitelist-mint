@@ -1,5 +1,7 @@
 @media (max-width: 600px) {
-  .logo,
+  .logo {
+    display: none;
+  }
   .github {
     display: none;
   }
