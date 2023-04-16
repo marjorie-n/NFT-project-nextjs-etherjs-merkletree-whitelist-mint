@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from "react";
+import styles from "../../src/styles/Home.module.css";
 import {
   Flex,
   Text,
@@ -35,7 +36,7 @@ const Header = () => {
 
           toast({
             title: "Congratulations!",
-            description: "Your wallet are connected with success",
+            description: "Your wallet is connected successfully",
             status: "success",
             duration: 5000,
             isClosable: true,
@@ -64,7 +65,13 @@ const Header = () => {
     >
       <Text>
         <Link href="/">
-          <Image src="/fuse.png" alt="Fuse logo" width="100px" height="100px" />
+          <Image
+            className={styles.logo}
+            src="/fuse.png"
+            alt="Fuse logo"
+            width="100px"
+            height="100px"
+          />
         </Link>
       </Text>
 
@@ -95,13 +102,19 @@ const Header = () => {
       ) : (
         <Flex alignItems="center">
           <Link
+          className={styles.github}
             href="https://github.com/Margotte83"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon as={FaGithub} color="white" boxSize={6} mr={3} />
+            <Icon  as={FaGithub} color="white" boxSize={6} mr={3} />
           </Link>
-          <Button onClick={connectWallet} colorScheme="blue">
+
+          <Button
+            className={styles.button}
+            onClick={connectWallet}
+            colorScheme="blue"
+          >
             Connect wallet
           </Button>
         </Flex>
