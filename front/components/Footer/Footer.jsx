@@ -10,8 +10,12 @@ const Footer = () => {
       bg="gray.800"
       color="white"
       direction={["column", "row"]}
-      px={[4, 8]}
-      py={[8, 12]}
+      px={[1, 2]}
+      py={[2, 3]}
+      flexWrap="wrap"
+      textAlign="center"
+      maxW="1200px"
+      margin="0 auto"
     >
       <chakra.span mr={2} mb={[2, 0]}>
         &copy; {new Date().getFullYear()} Crypto Astro, made with ❤️ by{" "}
