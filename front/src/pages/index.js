@@ -59,14 +59,21 @@ export default function Home() {
               mt="0.5rem"
             >
               <chakra.span fontWeight="bold">Explore the Galaxy🪐</chakra.span>
-            </Text>
-            <Text
-              fontSize={["1.5rem", "1.75rem", "1.75rem", "2rem"]}
-              mt="0.5rem"
-            >
-              <chakra.span fontWeight="bold">
-                On the Polygon blockchain✨
-              </chakra.span>
+              <Text
+                fontSize={["1.5rem", "1.75rem", "1.75rem", "2rem"]}
+                mt="0.5rem"
+              >
+                <chakra.span fontWeight="bold">
+                  On the Polygon blockchain✨
+                </chakra.span>
+                <br></br>
+                <chakra.span
+                  fontSize={["1rem", "1rem", "1rem", "1.5rem"]}
+                  textColor={"#dcdde1"}
+                >
+                  * mumbai testnet
+                </chakra.span>
+              </Text>
             </Text>
           </Flex>
           <Flex
