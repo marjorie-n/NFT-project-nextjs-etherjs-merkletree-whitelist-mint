@@ -28,8 +28,8 @@ const Header = () => {
       if (provider) {
         let network = await provider.getNetwork();
 
-        //mumbai network
-        if (network.chainId == 80001) {
+        // Mumbai network
+        if (network.chainId === 80001) {
           const resultAccount = await provider.send("eth_requestAccounts", []);
           setAccount(ethers.utils.getAddress(resultAccount[0]));
           setIsLoading(false);
@@ -55,6 +55,7 @@ const Header = () => {
       }
     }
   };
+
   return (
     <Flex
       width="100%"
@@ -62,9 +63,10 @@ const Header = () => {
       alignItems="center"
       padding="1.5rem"
       mb="1rem"
+      className={styles.Header}
     >
       <Text>
-        <Link href="/">
+        <Link href={"/"}>
           <Image
             className={styles.logo}
             src="/fuse.png"
@@ -75,12 +77,12 @@ const Header = () => {
         </Link>
       </Text>
 
-      <Flex justify="space-between" align="center" width="100px">
-        <Link href="/mint">mint nft</Link>
+      <Flex>
+        <Link href="/mint">Mint NFT</Link>
       </Flex>
 
       <Flex>
-        <Link href="/specialAccess">special</Link>
+        <Link href="/specialAccess">Special</Link>
       </Flex>
 
       {isLoading ? (
@@ -92,11 +94,16 @@ const Header = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon className={styles.github} as={FaGithub} color="white" boxSize={6} mr={3} />
+            <Icon
+              className={styles.github}
+              as={FaGithub}
+              color="white"
+              boxSize={5}
+              mr={3}
+            />
           </Link>
           <Text as="span" color="white" fontWeight="bold">
-            Wallet:
-            {account && account.slice(0, 5) + "..." + account.slice(-4)}
+            Wallet: {account && `${account.slice(0, 5)}...${account.slice(-4)}`}
           </Text>
         </Flex>
       ) : (
@@ -107,7 +114,13 @@ const Header = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon className={styles.github} as={FaGithub} color="white" boxSize={6} mr={3} />
+            <Icon
+              className={styles.github}
+              as={FaGithub}
+              color="white"
+              boxSize={5}
+              mr={3}
+            />
           </Link>
 
           <Button
@@ -115,7 +128,7 @@ const Header = () => {
             onClick={connectWallet}
             colorScheme="blue"
           >
-            Connect wallet
+            Connect Wallet
           </Button>
         </Flex>
       )}

@@ -1,5 +1,6 @@
 import { Text, Flex, Heading, Image, chakra } from "@chakra-ui/react";
 import Layout from "../../components/Layout/Layout";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
       />
 
       <Layout>
-        <Flex
+        <Flex className={styles.container}
           direction={["column", "column", "row", "row"]}
           w="100%"
           h="85vh"
@@ -34,7 +35,7 @@ export default function Home() {
           maxW="1200px"
           mx="auto"
         >
-          <Flex
+          <Flex className="content"
             width={["100%", "100%", "50%", "50%"]}
             direction="column"
             align="center"
@@ -68,13 +69,13 @@ export default function Home() {
               </chakra.span>
             </Text>
           </Flex>
-          <Flex
+          <Flex className={styles.image}
             width={["100%", "100%", "50%", "50%"]}
             align="center"
             justify="center"
             mt={["1.5rem", "1.5rem", "0", "0"]}
           >
-            <Image
+            <Image 
               src="https://res.cloudinary.com/defpadn0s/image/upload/v1680449623/cryto_astro-home_mtls9f.png"
               alt="astronauts"
               width={["100%", "60%", "80%", "90%"]}
