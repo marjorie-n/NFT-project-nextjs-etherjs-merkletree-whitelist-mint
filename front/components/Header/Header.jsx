@@ -88,11 +88,11 @@ const Header = () => {
       ) : account ? (
         <Flex alignItems="center">
           <Link
-            href="https://github.com/Margotte83"
+            href="https://github.com/marjorie-n/NFT-project-nextjs-etherjs-merkletree-whitelist-mint"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon as={FaGithub} color="white" boxSize={6} mr={3} />
+            <Icon className={styles.github} as={FaGithub} color="white" boxSize={6} mr={3} />
           </Link>
           <Text as="span" color="white" fontWeight="bold">
             Wallet:
@@ -103,7 +103,7 @@ const Header = () => {
         <Flex alignItems="center">
           <Link
             className={styles.github}
-            href="https://github.com/Margotte83"
+            href="https://github.com/marjorie-n/NFT-project-nextjs-etherjs-merkletree-whitelist-mint"
             target="_blank"
             rel="noopener noreferrer"
           >

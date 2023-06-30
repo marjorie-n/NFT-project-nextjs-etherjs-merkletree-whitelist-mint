@@ -1,4 +1,4 @@
-import { Flex, Link, chakra } from "@chakra-ui/react";
+import { Flex, Link, Text } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
@@ -16,9 +16,9 @@ const Footer = () => {
       textAlign="center"
       margin="0 auto"
     >
-      <chakra.span mr={2} mb={[2, 0]}>
+      <Text mr={2} mb={[2, 0]}>
         &copy; {new Date().getFullYear()} Crypto Astro, made with ❤️ by{" "}
-      </chakra.span>
+      </Text>
       <Flex align="center">
         <Link
           href="https://www.linkedin.com/in/marjorie-ngoupende-dev/"
@@ -37,8 +37,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           mx={2}
           _hover={{ textDecoration: "none", color: "pink.500" }}
-        >
-          <chakra.span color="white">|</chakra.span>Alyra
+        >| Alyra
         </Link>
       </Flex>
     </Flex>

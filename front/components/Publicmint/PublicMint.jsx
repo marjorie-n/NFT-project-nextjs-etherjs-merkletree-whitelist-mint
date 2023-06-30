@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useEthersProvider from "../../hook/useEthersProvider";
 import Contract from "../../public/NFTCryptoAstro.json";
 import { ethers } from "ethers";
@@ -32,7 +32,7 @@ const PublicMint = (props) => {
       let mint = await contract.publicMint(account, quantity, overrides);
       await mint.wait();
       toast({
-        title: "Congrulations!🎉",
+        title: "Congratulations!🎉",
         description: "You have just minted an NFT",
         status: "success",
         duration: 5000,
@@ -43,7 +43,7 @@ const PublicMint = (props) => {
       props.getDatas();
     } catch (error) {
       toast({
-        title: "An occured error 😵",
+        title: "An error occurred 😵",
         description: "Something went wrong",
         status: "error",
         duration: 5000,
@@ -54,6 +54,10 @@ const PublicMint = (props) => {
       // console.log(error);
     }
   };
+
+  useEffect(() => {
+    // Fetch account data here if necessary
+  }, []);
 
   return (
     <>
