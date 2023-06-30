@@ -20,7 +20,7 @@ export default function Home() {
       <link
         href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap"
         rel="stylesheet"
-      ></link>
+      />
 
       <Layout>
         <Flex
@@ -51,7 +51,7 @@ export default function Home() {
             </Heading>
             <Text fontSize={["1.5rem", "1.75rem", "1.75rem", "2rem"]}>
               <chakra.span fontWeight="bold">
-                Collect Crypto Astro NFTs:
+                Collect Crypto Astro NFTs
               </chakra.span>
             </Text>
             <Text
@@ -59,21 +59,13 @@ export default function Home() {
               mt="0.5rem"
             >
               <chakra.span fontWeight="bold">Explore the Galaxy🪐</chakra.span>
-              <Text
-                fontSize={["1.5rem", "1.75rem", "1.75rem", "2rem"]}
-                mt="0.5rem"
+              <br />
+              <chakra.span
+                fontSize={["1rem", "1rem", "1rem", "1.5rem"]}
+                textColor={"#dcdde1"}
               >
-                <chakra.span fontWeight="bold">
-                  On the Polygon blockchain✨
-                </chakra.span>
-                <br></br>
-                <chakra.span
-                  fontSize={["1rem", "1rem", "1rem", "1.5rem"]}
-                  textColor={"#dcdde1"}
-                >
-                  * mumbai testnet
-                </chakra.span>
-              </Text>
+                * Just now on mumbai testnet
+              </chakra.span>
             </Text>
           </Flex>
           <Flex
